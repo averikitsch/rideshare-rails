@@ -14,38 +14,26 @@
 <body>
 <div id="wrapper">
   <header>
-    <a id="logo" href="#">RideShare</a>
+    <!-- <a id="logo" href="#">RideShare</a> -->
+    <%= link_to "RideShare", root_path, id: "logo" %>
     <nav id="primary_nav_wrap">
       <ul>
         <!-- <li class="current-menu-item"><a href="#">Home</a></li> -->
         <li><a href="#">Driver</a>
           <ul>
-            <li><a href="#">View All Drivers</a></li>
-            <li><a href="#">Add A Driver</a></li>
+            <li><%= link_to "View All Drivers", drivers_path %></li>
+            <li><%= link_to "Add A Driver", new_driver_path %></li>
           </ul>
         </li>
         <li><a href="#">Passenger</a>
           <ul>
-            <li><a href="#">View All Drivers</a></li>
-            <li><a href="#">Add a Passenger</a></li>
+            <li><%= link_to "View All Passengers", passengers_path %></li>
+            <li><%= link_to "Add a Passenger", new_passenger_path %></li>
           </ul>
         </li>
       </ul>
     </nav>
   </header>
-
-  <!-- <header>
-  <a id="logo" href="#">OP</a>
-  <nav>
-  <ul>
-  <li><a href="#" id="current">Home</a></li>
-  <li><a href="#">Services</a></li>
-  <li><a href="#">About</a></li>
-  <li><a href="#" id="fb">Facebook</a></li>
-  <li><a href="#" id="twitter">Twitter</a></li>
-</ul>
-</nav>
-</header> -->
 
 <section>
   <%= yield %>
