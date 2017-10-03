@@ -1,6 +1,6 @@
 <h2> Name: <%= @driver.name %> </h2>
 <h3> Driver VIN: <%= @driver.vin %> </h3>
-
+<h3>Average Rating : <%= @driver.average_rating %></h3>
 <h3>Trips</h3>
 <% if @driver.trips.empty? %>
     <p>
