@@ -21,7 +21,7 @@ class Driver < ApplicationRecord
     drivers_trips.each do |trip|
       total_earnings += trip.cost
     end
-    return "$ #{sprintf("%.2f",(total_earnings / 100.0))}"
+    return "$ #{sprintf("%.2f",(total_earnings / 100.0 * 0.85))}"
   end
 
 end

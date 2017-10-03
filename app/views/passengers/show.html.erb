@@ -1,5 +1,6 @@
 <h2> Name: <%= @passenger.name %> </h2>
 <h3> Phone number: <%= @passenger.phone_number %> </h3>
+<h3> Total spent on all rides:  <%= @passenger.total_cost %> </h3>
 <h3>Trips</h3>
 <% if @passenger.trips.empty? %>
     <p>
