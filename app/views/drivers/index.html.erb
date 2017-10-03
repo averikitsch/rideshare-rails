@@ -1,7 +1,8 @@
+<h2>All Drivers</h2>
 <% if @drivers.count == 0 %>
-<h1>There are no drivers to display</h1>
+<h3>There are no drivers to display</h3>
 <% else %>
 <% @drivers.each do |driver| %>
-<h2><%= link_to driver.name, driver_path(driver) %></h2>
+<h3><%= link_to driver.name, driver_path(driver) %></h2>
 <% end %>
 <%end%>

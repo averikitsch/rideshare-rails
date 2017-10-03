@@ -1,8 +1,9 @@
+<h2>All Passengers</h2>
 <% if @passengers.count == 0 %>
-    <h1>There are no passengers to display</h1>
+    <h3>There are no passengers to display</h3>
     need to add a link to add some !
 <% else %>
     <% @passengers.each do |passenger| %>
-         <h2><%= link_to passenger.name, passenger_path(passenger) %></h2>
+         <h3><%= link_to passenger.name, passenger_path(passenger) %></h3>
     <% end %>
 <%end%>
