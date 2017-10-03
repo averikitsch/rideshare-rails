@@ -22,14 +22,14 @@ class TripsController < ApplicationController
   def rating
   end
 
-  def new
-      @trip = Trip.new
-  end
+  # def new
+  #     @trip = Trip.new
+  # end
 
   def create
-    @trip =Trip.new(trip_params)
+    @trip =Trip.new(cost: rand(100...10000), rating: 0, date: Date.today, driver_id: Driver.ids.sample, passenger_id: params[:pax_id])
     if @trip.save
-      redirect_to passenger_path(@trip.passenger_id)
+      redirect_to trip_path(@trip.id)
     else
       render :new
     end
