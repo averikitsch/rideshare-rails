@@ -27,7 +27,7 @@ end
 
 def update
   if @driver.update(driver_params)
-    redirect_to drivers_path(@driver)
+    redirect_to driver_path(@driver)
   else
     render "edit"
   end
