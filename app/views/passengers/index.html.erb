@@ -1,7 +1,7 @@
 <h2>All Passengers</h2>
 <% if @passengers.count == 0 %>
     <h3>There are no passengers to display</h3>
-    need to add a link to add some !
+    <h3><%= link_to "Click here to add a passenger.", new_passenger_path %></h3>
 <% else %>
     <% @passengers.each do |passenger| %>
     <div class="person">
