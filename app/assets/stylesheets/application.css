@@ -25,12 +25,17 @@ html, body {
   margin:0;
   padding:0;
   height:100%;
+  background-image: url("bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 #wrapper {
   font-family: 'Open Sans';
   text-align: center;
-  background-color: #fafafa;
+  /*background-color: #fafafa;*/
   min-height: 100%;
   position: relative;
 }
@@ -62,7 +67,7 @@ footer {
   float: left;
   padding: .4em;
   text-decoration: none;
-  color: #9ec0db;
+  color: #fff;
 }
 
 #logo:hover {
@@ -85,7 +90,7 @@ footer {
 #primary_nav_wrap ul a
 {
   display:block;
-  color: #9ec0db;
+  color: #fff;
   text-decoration:none;
   text-transform: uppercase;
   padding: 0.5em 0.6em;
@@ -101,7 +106,7 @@ footer {
 
 #primary_nav_wrap ul li:hover
 {
-  background:#ddd;
+  background:#333;
 }
 
 #primary_nav_wrap ul ul
@@ -110,7 +115,7 @@ footer {
   position:absolute;
   top:100%;
   left:0;
-  background:#fff;
+  background:#595959;
   padding:0
 }
 
@@ -129,4 +134,8 @@ footer {
 #primary_nav_wrap ul li:hover > ul
 {
   display:block
+}
+
+h1 {
+  font-size: 2em;
 }
