@@ -1,5 +1,31 @@
 <h2> Name: <%= @passenger.name %> </h2>
 <h3> Phone number: <%= @passenger.phone_number %> </h3>
+<h3>Trips</h3>
+<% if @passenger.trips.empty? %>
+    <p>
+      This passenger has no trips
+    </p>
+    <% else %>
+<table>
+    <tr>
+      <th>ID</th>
+      <th>Driver ID</th>
+      <th>Date</th>
+      <th>Rating</th>
+      <th>Cost</th>
+    </tr>
+    <% @passenger.trips.each do |trip| %>
+    <tr>
+      <td> <%=trip.id%> </td>
+      <td> <%=trip.driver_id%> </td>
+      <td> <%=trip.date%> </td>
+      <td> <%=trip.rating%> </td>
+      <td> $<%=(trip.cost/100).round(2)%> </td>
+    </tr>
+    <% end %>
+</table>
+<% end %>
+
 <%= link_to "Back", passengers_path, class:"button" %>
 <%= link_to "Delete", passenger_path(@passenger), method: :delete, data: {confirm: "Are you sure?"}, class:"button" %>
 <%= link_to "Edit", edit_passenger_path(@passenger), class:"button" %>
