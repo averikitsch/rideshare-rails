@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RideshareRails</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>RideshareRails</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Pacifico">
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Open+Sans">
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <a id="logo" href="#">RideShare</a>
+    <nav id="primary_nav_wrap">
+      <ul>
+        <!-- <li class="current-menu-item"><a href="#">Home</a></li> -->
+        <li><a href="#">Driver</a>
+          <ul>
+            <li><a href="#">View All Drivers</a></li>
+            <li><a href="#">Add A Driver</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Passenger</a>
+          <ul>
+            <li><a href="#">View All Drivers</a></li>
+            <li><a href="#">Add a Passenger</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-  <body>
-    <%= yield %>
-  </body>
+  <!-- <header>
+  <a id="logo" href="#">OP</a>
+  <nav>
+  <ul>
+  <li><a href="#" id="current">Home</a></li>
+  <li><a href="#">Services</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#" id="fb">Facebook</a></li>
+  <li><a href="#" id="twitter">Twitter</a></li>
+</ul>
+</nav>
+</header> -->
+
+<section>
+  <%= yield %>
+</section>
+
+
+<footer>
+  <p>&copy;2017 💻 built by Tanja & Averi
+          </p>
+</footer>
+</div>
+</body>
 </html>
