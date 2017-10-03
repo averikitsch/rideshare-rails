@@ -49,8 +49,15 @@ header {
 section {
   background-color: #fff;
   margin: 0 20%;
-  padding: 5px 0;
+  padding: 5px 0 20px 0;
   margin-bottom: 100px;
+}
+
+.button {
+  background-color: #595959;
+  color: #fff;
+  padding: 2px 5px;
+  margin: 0 2px;
 }
 
 footer {

@@ -3,6 +3,6 @@
 <h3>There are no drivers to display</h3>
 <% else %>
 <% @drivers.each do |driver| %>
-<h3><%= link_to driver.name, driver_path(driver) %></h2>
+<h3><%= link_to driver.name, driver_path(driver) %></h3>
 <% end %>
 <%end%>
