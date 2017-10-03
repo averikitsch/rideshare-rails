@@ -10,9 +10,16 @@ def show
 end
 
 def new
+  @driver = Driver.new
 end
 
 def create
+  @driver = Driver.new(driver_params)
+  if @driver.save
+    redirect_to drivers_path
+  else
+    render :new
+  end
 end
 
 def edit
@@ -34,7 +41,7 @@ end
 private
 
 def driver_params
-  params.require(:driver).permit(:name, :phone_number)
+  params.require(:driver).permit(:name, :vin)
 end
 
 def find_driver
