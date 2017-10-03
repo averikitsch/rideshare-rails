@@ -2,6 +2,7 @@
 <h3> Phone number: <%= @passenger.phone_number %> </h3>
 <h3> Total spent on all rides:  <%= @passenger.total_cost %> </h3>
 <h3>Trips</h3>
+<%= link_to "Add a Trip", trips_path(:pax_id => @passenger.id), method: :post, class: "button" %>
 <% if @passenger.trips.empty? %>
     <p>
       This passenger has no trips.
