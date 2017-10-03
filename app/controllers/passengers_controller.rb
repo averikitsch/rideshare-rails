@@ -27,7 +27,7 @@ class PassengersController < ApplicationController
 
   def update
     if @passenger.update(passenger_params)
-      redirect_to passengers_path(@passenger)
+      redirect_to passenger_path(@passenger)
     else
       render "edit"
     end
