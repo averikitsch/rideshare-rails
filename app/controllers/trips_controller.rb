@@ -6,7 +6,6 @@ class TripsController < ApplicationController
   end
 
   def show
-
   end
 
   def edit
@@ -23,7 +22,13 @@ class TripsController < ApplicationController
   def rating
   end
 
+  def new
+      @trip = Trip.new
+  end
+
   def create
+    @trip =Trip.new(trip_params)
+
   end
 
 

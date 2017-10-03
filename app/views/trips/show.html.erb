@@ -1,0 +1,21 @@
+<h2> Trip # <%= @trip.id %> </h2>
+
+
+<table>
+    <tr>
+      <th>ID</th>
+      <th>Driver ID</th>
+      <th>Date</th>
+      <th>Rating</th>
+      <th>Cost</th>
+    </tr>
+
+    <tr>
+      <td> <%=@trip.id%> </td>
+      <td> <%=@trip.driver_id%> </td>
+      <td> <%=@trip.date%> </td>
+      <td> <%=@trip.rating%> </td>
+      <td> $<%=(@trip.cost/100).round(2)%> </td>
+    </tr>
+    
+</table>
