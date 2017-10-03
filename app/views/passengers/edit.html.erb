@@ -1,0 +1,7 @@
+<h1> Edit Passenger</h1>
+<%= form_for(@passenger) do |f|%>
+<%= f.text_field :name, label: "Passenger Name" %>
+<%= f.text_field :phone_number, label: "Phone Number" %>
+<%= f.submit "Save changes"%>
+<%= link_to "Go back", passengers_path%>
+<% end %>

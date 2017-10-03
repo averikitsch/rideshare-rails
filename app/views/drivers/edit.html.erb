@@ -1,0 +1,8 @@
+<h1> Edit Driver</h1>
+<%= form_for(@driver) do |f|%>
+<%= f.text_field :name, label: "Driver Name" %>
+<%= f.text_field :vin, label: "VIN" %>
+<%= f.submit "Save changes"%>
+<%= link_to "Go back", drivers_path%>
+
+<% end %>

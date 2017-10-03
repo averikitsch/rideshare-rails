@@ -1,0 +1,5 @@
+<h2> Name: <%= @passenger.name %> </h2>
+<h3> Phone number: <%= @passenger.phone_number %> </h3>
+<%= link_to "Back", passengers_path %>
+<%= link_to "Delete", passengers_path(@passenger), method: :delete, data: {confirm: "Are you sure?"} %>
+<%= link_to "Edit", edit_passenger_path(@passenger) %>
