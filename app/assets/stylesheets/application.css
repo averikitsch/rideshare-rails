@@ -148,3 +148,10 @@ footer {
 h1 {
   font-size: 2em;
 }
+
+.person {
+  /*float: left;*/
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+}
