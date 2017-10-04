@@ -33,7 +33,7 @@ html, body {
 }
 
 #wrapper {
-  font-family: 'Open Sans';
+  font-family: 'Raleway';
   text-align: center;
   /*background-color: #fafafa;*/
   min-height: 100%;
@@ -148,11 +148,11 @@ footer {
 }
 
 li#pax_link {
-  width:235px;
+  width:230px;
 }
 
 li#driver_link {
-  width:170px;
+  width:190px;
 }
 
 #primary_nav_wrap ul ul a
@@ -217,4 +217,25 @@ th {
 td a {
   text-decoration: none;
   color: #3a5266;
+}
+
+strong {
+  font-weight: bold;
+}
+
+li {
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+.field_with_errors {
+  display: inline-block;
+}
+
+label {
+  font-weight: bold;
+}
+
+form {
+  margin: 15px 0;
 }
