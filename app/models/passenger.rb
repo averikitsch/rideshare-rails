@@ -15,4 +15,8 @@ class Passenger < ApplicationRecord
     return "$ #{sprintf("%.2f",(total_cost / 100.0))}"
   end
 
+  def self.search(search)
+    where("name ILIKE ?", "%#{search}%")
+  end
+
 end

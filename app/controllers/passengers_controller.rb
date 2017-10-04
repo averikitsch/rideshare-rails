@@ -4,6 +4,11 @@ class PassengersController < ApplicationController
 
   def index
     @passengers = Passenger.order(:name)
+    if params[:search]
+      @passengers = Passenger.search(params[:search]).order(:name)
+    else
+      @passengers = Passenger.all.order(:name)
+    end
   end
 
   def show
