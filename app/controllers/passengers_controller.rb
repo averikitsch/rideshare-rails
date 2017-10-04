@@ -3,7 +3,7 @@ class PassengersController < ApplicationController
   before_action :find_passenger, only: [:show, :edit, :update, :destroy]
 
   def index
-    @passengers = Passenger.all.order("created_at DESC")
+    @passengers = Passenger.order(:name)
   end
 
   def show

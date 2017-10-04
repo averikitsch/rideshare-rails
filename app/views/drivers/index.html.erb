@@ -1,10 +1,11 @@
 <h2>All Drivers</h2>
 <% if @drivers.count == 0 %>
-<h3>There are no drivers to display</h3>
+  <h3>There are no drivers to display</h3>
 <% else %>
-<% @drivers.each do |driver| %>
-<div class="person">
-<h3><%= link_to driver.name, driver_path(driver) %></h3>
-</div>
-<% end %>
+  <% @drivers.each do |driver| %>
+  <div class="person">
+    <%= link_to image_tag("002-user-3.png", alt:"user"), driver_path(driver) %>
+    <h3><%= link_to driver.name, driver_path(driver) %></h3>
+  </div>
+  <% end %>
 <%end%>
