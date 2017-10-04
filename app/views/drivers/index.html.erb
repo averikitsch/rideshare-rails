@@ -1,4 +1,6 @@
 <h2>All Drivers</h2>
+<%= link_to "Add Driver", new_driver_path, class:"button" %>
+<%= link_to "Home", root_path, class:"button" %>
 <%= form_tag(drivers_path, :method => "get", id: "search-form") do %>
     <%= text_field_tag :search, params[:search], placeholder: "Search Drivers" %>
     <%= submit_tag "Search", :name => nil %>
