@@ -24,4 +24,8 @@ class Driver < ApplicationRecord
     return "$ #{sprintf("%.2f",(total_earnings / 100.0 * 0.85))}"
   end
 
+  def self.search(search)
+    where("name ILIKE ?", "%#{search}%")
+  end
+
 end
