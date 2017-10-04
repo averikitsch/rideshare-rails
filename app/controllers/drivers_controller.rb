@@ -2,7 +2,7 @@ class DriversController < ApplicationController
 before_action :find_driver, only: [:show, :edit, :update, :destroy]
 
 def index
-  @drivers = Driver.all.order("created_at DESC")
+  @drivers = Driver.order(:name)
 end
 
 def show
