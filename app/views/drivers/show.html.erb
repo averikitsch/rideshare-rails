@@ -3,7 +3,7 @@
 <h3>Average Rating : <%= @driver.average_rating %></h3>
 <h3>Total Earnings : <%= @driver.total_earnings %></h3>
 
-<h3>Trips</h3>
+<h3>Trips: </h3>
 <% if @driver.trips.empty? %>
     <p>
       This driver has not given any rides yet.
@@ -30,5 +30,5 @@
 <% end %>
 
 <%= link_to "Back", drivers_path, class:"button"%>
-<%= link_to "Delete", driver_path(@driver), method: :delete, data: {confirm: "Are you sure?"}, class:"button" %>
-<%= link_to "Edit", edit_driver_path(@driver), class:"button" %>
+<%= link_to "Delete Driver", driver_path(@driver), method: :delete, data: {confirm: "Are you sure?"}, class:"button" %>
+<%= link_to "Edit Driver", edit_driver_path(@driver), class:"button" %>
