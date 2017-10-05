@@ -1,25 +1,3 @@
-/*
-* This is a manifest file that'll be compiled into application.css, which will include all the files
-* listed below.
-*
-* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
-* vendor/assets/stylesheets directory can be referenced here using a relative path.
-*
-* You're free to add application-wide styles to this file and they'll appear at the bottom of the
-* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
-* files in this directory. Styles in this file should be added after the last require_* statement.
-* It is generally better to create a new file per style scope.
-*
-*= require_tree .
-*= require_self
-*/
-/*html {
-font-family: 'Open Sans'
-}*/
-
-/** {
-display: inline-block;
-}*/
 
 html, body {
   margin:0;
@@ -83,7 +61,6 @@ footer {
   color: #fff;
   padding: 5px 0;
 }
-
 
 #logo {
   font-family: 'Pacifico';
@@ -208,7 +185,6 @@ table {
 
 tr:first-of-type {
   background-color: #fff;
-
 }
 
 th {
@@ -239,10 +215,4 @@ label {
 
 form {
   margin: 15px 0;
-}
-
-h1 {
-  font-family: 'Pacifico';
-  font-size: 2.5em;
-  font-weight:bolder;
 }

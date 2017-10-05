@@ -9,7 +9,6 @@
 
 <% if @passengers.blank? %>
     <h3>There are no passengers to display</h3>
-    <h3><%= link_to "Click here to add a passenger.", new_passenger_path %></h3>
 <% else %>
     <% @passengers.each do |passenger| %>
     <div class="person">

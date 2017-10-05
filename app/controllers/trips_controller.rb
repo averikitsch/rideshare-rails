@@ -11,21 +11,6 @@ class TripsController < ApplicationController
   def edit
   end
 
-  def update
-    if @trip.update(trip_params)
-      redirect_to passenger_path(@trip.passenger_id)
-    else
-      render "edit"
-    end
-  end
-
-  def rating
-  end
-
-  # def new
-  #     @trip = Trip.new
-  # end
-
   def create
     @trip =Trip.new(cost: rand(100...10000), rating: 0, date: Date.today, driver_id: Driver.ids.sample, passenger_id: params[:pax_id])
     if @trip.save
@@ -35,8 +20,6 @@ class TripsController < ApplicationController
     end
   end
 
-  def edit
-  end
 
   def update
     if @trip.update(trip_params)
