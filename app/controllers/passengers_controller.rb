@@ -3,11 +3,11 @@ class PassengersController < ApplicationController
   before_action :find_passenger, only: [:show, :edit, :update, :destroy]
 
   def index
-    @passengers = Passenger.order(:name)
     if params[:search]
-      @passengers = Passenger.search(params[:search]).order(:name)
+      search_passengers = Passenger.search(params[:search]).order(:name)
+      @passengers = search_passengers.paginate(:page => params[:page], :per_page => 9)
     else
-      @passengers = Passenger.all.order(:name)
+      @passengers = Passenger.all.paginate(:page => params[:page], :per_page => 9)
     end
   end
 

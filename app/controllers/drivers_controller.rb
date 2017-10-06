@@ -2,12 +2,14 @@ class DriversController < ApplicationController
   before_action :find_driver, only: [:show, :edit, :update, :destroy]
 
   def index
-    @drivers = Driver.order(:name)
+
     if params[:search]
-      @drivers = Driver.search(params[:search]).order(:name)
+      search_drivers = Driver.search(params[:search]).order(:name)
+      @drivers = search_drivers.paginate(:page => params[:page], :per_page => 9)
     else
-      @drivers = Driver.all.order(:name)
+      @drivers = Driver.all.paginate(:page => params[:page], :per_page => 9)
     end
+
   end
 
   def show

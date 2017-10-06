@@ -1,10 +1,13 @@
 <h1>All Drivers</h1>
+
 <%= link_to "Add Driver", new_driver_path, class:"button" %>
 <%= link_to "Home", root_path, class:"button" %>
+<%= will_paginate(@drivers) %>
 <%= form_tag(drivers_path, :method => "get", id: "search-form") do %>
     <%= text_field_tag :search, params[:search], placeholder: "Search Drivers" %>
     <%= submit_tag "Search", :name => nil %>
 <% end %>
+
 
 <% if @drivers.blank? %>
   <h3>There are no drivers to display</h3>
